@@ -41,14 +41,14 @@ export default function Experience() {
                 position="Dashboard Web Intern"
                 date="May 2024 - Aug 2024"
               >
-                <div className="flex flex-col items-center justify-center space-y-6 ">
+                <div className="flex flex-col items-center justify-center space-y-6 mx-auto max-w-[1000px]">
                   <Image
                     src="/experience/kompas/1.png"
                     alt="kompas"
-                    width="0"
-                    height="0"
-                    sizes="60vw"
-                    className="w-full h-auto  mt-8"
+                    width={800}
+                    height={600}
+                    unoptimized
+                    className="w-full h-auto object-contain"
                   />
                   <p className="text-lg">
                     Conducted extensive data preprocessing using SPSS, including
@@ -83,16 +83,16 @@ export default function Experience() {
                 position="Data Analyst Intern"
                 date="Sep 2023 - Jan 2024"
               >
-                <div className="flex flex-col items-center justify-center space-y-6 ">
+                <div className="flex flex-col items-center justify-center space-y-6 mx-auto max-w-[1000px]">
                   <Image
                     src="/experience/svara/1.png"
-                    alt="svara"
-                    width="0"
-                    height="0"
-                    sizes="60vw"
-                    className="w-full max-w-[calc(100%-3rem)] h-auto "
+                    alt="kompas"
+                    width={800}
+                    height={600}
+                    unoptimized
+                    className="w-full h-auto object-contain"
                   />
-                  <p className="text-lg text-center">
+                  <p className="text-lg">
                     Constructed visualization and data analysis for
                     recommendation system and programmed Python script for
                     Elastic Stack integration.
