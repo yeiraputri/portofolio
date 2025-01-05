@@ -29,15 +29,15 @@ export default function ProjectsCarousel() {
       imageSrc: "/projects/telco/1.png",
       description:
         "Understand the factors contributing to customer churn and predict future churn events, which can help in devising more effective customer retention strategies.",
-      techStack: ["Python", "Pandas", "scikit-learn"],
+      techStack: ["Python"],
       link: "/projects/telco",
     },
     {
-      title: "Mobile Chat App",
+      title: "Understanding Lego Sets Popularity",
       imageSrc: "/images/projects/mobile-chat-app.png",
       description:
-        "A cross-platform chat application with real-time messaging using Firebase.",
-      techStack: ["React Native", "Firebase", "Expo"],
+        "Conducted exploratory data analysis (EDA) on the LEGO dataset to uncover trends and insights.",
+      techStack: ["SQL", "Python"],
       link: "/projects/mobile-chat-app",
     },
   ];

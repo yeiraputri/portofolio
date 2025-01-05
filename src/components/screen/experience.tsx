@@ -26,8 +26,19 @@ export default function Experience() {
                 position="Business Analyst Intern"
                 date="Aug 2024 - Dec 2024"
               >
-                <div>
-                  <p>Image</p>
+                <div className="flex flex-col items-center justify-center space-y-6 mx-auto max-w-[1000px]">
+                  <Image
+                    src="/experience/kompas/1.png"
+                    alt="kompas"
+                    width={800}
+                    height={600}
+                    unoptimized
+                    className="w-full h-auto object-contain"
+                  />
+                  <p className="text-lg">
+                  Streamlined Financial Credit Limit and Term of Payment (TOP) processes, improved data analysis with Power BI dashboards, 
+                  and enhanced website security by developing a secure change password feature.
+                  </p>
                 </div>
               </ExperienceItem>
             </CarouselItem>
@@ -51,9 +62,8 @@ export default function Experience() {
                     className="w-full h-auto object-contain"
                   />
                   <p className="text-lg">
-                    Conducted extensive data preprocessing using SPSS, including
-                    cleaning, statistical analysis, and feature engineering to
-                    ensure data integrity
+                  Performed data cleaning in Google Sheets to ensure accurate dashboards and created interactive visual dashboards using 
+                  Tableau and Looker Studio to uncover trends effectively.
                   </p>
                 </div>
               </ExperienceItem>
@@ -68,8 +78,20 @@ export default function Experience() {
                 position="Machine Learning Cohort"
                 date="Feb 2024 - Jul 2024"
               >
-                <div>
-                  <p>Image</p>
+                <div className="flex flex-col items-center justify-center space-y-6 mx-auto max-w-[700px] max-h-[500px]">
+                  <Image
+                    src="/experience/bangkit/1.jpg"
+                    alt="bangkit"
+                    width={800}
+                    height={600}
+                    unoptimized
+                    className="w-full h-auto object-contain"
+                  />
+                  <p className="text-lg">
+                  Completed coursework in data analytics, machine learning, and TensorFlow development, including Python data analysis,
+                  data visualization, and mathematics for machine learning. Built a machine learning model for the Cultivitea app, 
+                  designed to detect tea plant diseases.
+                  </p>
                 </div>
               </ExperienceItem>
             </CarouselItem>
@@ -93,9 +115,8 @@ export default function Experience() {
                     className="w-full h-auto object-contain"
                   />
                   <p className="text-lg">
-                    Constructed visualization and data analysis for
-                    recommendation system and programmed Python script for
-                    Elastic Stack integration.
+                  Developed Kibana visualizations to enhance radio data analysis and communication and program Python 
+                  scripts for Elasticstack integration to streamline data processing workflows.
                   </p>
                 </div>
               </ExperienceItem>

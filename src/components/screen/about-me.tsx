@@ -17,19 +17,9 @@ export default function AboutMe() {
           </div>
 
           <div className="lg:w-2/3 w-full text-justify text-lg lg:pr-[7vw]">
-            I&apos;m a Final Year Information Systems student at the Universitas
-            Indonesia with a strong passion for data analysis and data science. My
-            academic background has equipped me with a thorough understanding of
-            data—from interpreting and processing information to extracting
-            insights for decision-making.
-            <br />
-            <br />
-            I&apos;ve completed several hands-on projects and interned as a data
-            analyst, allowing me to apply my knowledge in real-world settings.
-            Currently, I&apos;m honing my skills in machine learning through the
-            Bangkit Academy while interning as a Dashboard Web developer at Harian
-            Kompas. I&apos;m excited to keep expanding my expertise and contribute
-            innovative data solutions wherever I can.
+          I’m in my final year majoring in Information Systems at the University of Indonesia. I have a keen interest in data analysis, business intelligence, and data science. 
+          My educational background has given me extensive knowledge about data in general (how to interpret it, how to obtain information from data, how to process data to gain insights, etc). 
+          I have already completed several projects and have interned at multiple place. 
           </div>
         </div>
       </div>
