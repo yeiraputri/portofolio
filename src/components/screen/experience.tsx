@@ -1,22 +1,35 @@
-"use client";
-import Image from "next/image";
-import Content from "../common/content";
-import ExperienceItem from "../common/experience-item";
-import PageTitle from "../common/page-title";
-import { Carousel, CarouselContent, CarouselItem } from "../ui/carousel";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
+"use client"
+import Image from "next/image"
+import Autoplay from "embla-carousel-autoplay"
+import { useRef } from "react"
+
+import Content from "../common/content"
+import ExperienceItem from "../common/experience-item"
+import PageTitle from "../common/page-title"
+import {
+  Carousel,
+  CarouselContent,
+  CarouselItem,
+  CarouselPrevious,
+  CarouselNext,
+} from "../ui/carousel"
 
 export default function Experience() {
-  const plugin = useRef(Autoplay({ delay: 2000 }));
+  const plugin = useRef(Autoplay({ delay: 2000 }))
+
   return (
     <Content>
       <PageTitle params={{ title: "Experience" }} />
 
-      <div className="flex-1">
-        <Carousel plugins={[plugin.current]}>
+      <div className="relative flex-1">
+        <Carousel 
+          plugins={[plugin.current]}
+          className="h-full flex items-center justify-center" 
+        >
+          {/* The Slide Container */}
           <CarouselContent className="h-full">
-            <CarouselItem className=" h-[87vh] w-full max-w-[calc(100%-6rem)]">
+            {/* Slide 1 */}
+            <CarouselItem className="h-[87vh] w-full max-w-[calc(100%-6rem)]">
               <ExperienceItem
                 imageSrc="/images/logo-app.png"
                 altText="Company logo"
@@ -42,7 +55,9 @@ export default function Experience() {
                 </div>
               </ExperienceItem>
             </CarouselItem>
-            <CarouselItem className=" h-[87vh] w-full max-w-[calc(100%-6rem)]">
+
+            {/* Slide 2 */}
+            <CarouselItem className="h-[87vh] w-full max-w-[calc(100%-6rem)]">
               <ExperienceItem
                 imageSrc="/images/logo-kompas.png"
                 altText="Company logo"
@@ -68,7 +83,9 @@ export default function Experience() {
                 </div>
               </ExperienceItem>
             </CarouselItem>
-            <CarouselItem className=" h-[87vh] w-full max-w-[calc(100%-6rem)]">
+
+            {/* Slide 3 */}
+            <CarouselItem className="h-[87vh] w-full max-w-[calc(100%-6rem)]">
               <ExperienceItem
                 imageSrc="/images/logo-bangkit.png"
                 altText="Company logo"
@@ -95,7 +112,9 @@ export default function Experience() {
                 </div>
               </ExperienceItem>
             </CarouselItem>
-            <CarouselItem className=" h-[87vh] w-full max-w-[calc(100%-6rem)]">
+
+            {/* Slide 4 */}
+            <CarouselItem className="h-[87vh] w-full max-w-[calc(100%-6rem)]">
               <ExperienceItem
                 imageSrc="/images/logo-svara.png"
                 altText="Company logo"
@@ -122,8 +141,11 @@ export default function Experience() {
               </ExperienceItem>
             </CarouselItem>
           </CarouselContent>
+
+          <CarouselPrevious className="left-4 top-1/2 -translate-y-1/2 z-20" />
+          <CarouselNext className="right-4 top-1/2 -translate-y-1/2 z-20" />
         </Carousel>
       </div>
     </Content>
-  );
+  )
 }

@@ -110,7 +110,6 @@ export default function CapitalBikeSharePage() {
             </li>
           </ul>
 
-          {/* Single Image Snippet */}
           <div className="mt-6">
             <p className="font-semibold mb-2">
               Snippet 1: BikeShare Visualization

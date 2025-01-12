@@ -28,6 +28,12 @@ export default function Skills() {
               width={200}
             />
             <Image
+              src="/skills/python.png"
+              alt="Python"
+              height={200}
+              width={200}
+            />
+            <Image
               src="/skills/looker.png"
               alt="Looker Studio.js"
               height={200}
@@ -79,7 +85,15 @@ export default function Skills() {
                 />
                 <p className={`text-[20px] mt-2 `}>SQL</p>
               </CarouselItem>
-
+              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
+                <Image
+                  src="/skills/python.png"
+                  alt="Python"
+                  height={100}
+                  width={100}
+                />
+                <p className={`text-[20px] mt-2 `}>Python</p>
+              </CarouselItem>
               <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
                 <Image
                   src="/skills/looker.png"

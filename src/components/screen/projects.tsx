@@ -34,7 +34,7 @@ export default function ProjectsCarousel() {
     },
     {
       title: "Understanding Lego Sets Popularity",
-      imageSrc: "/images/projects/mobile-chat-app.png",
+      imageSrc: "/projects/lego/lego.jpg",
       description:
         "Conducted exploratory data analysis (EDA) on the LEGO dataset to uncover trends and insights.",
       techStack: ["SQL", "Python"],
