@@ -29,10 +29,8 @@ export default function LegoPage() {
 
           <SectionTitle params={{ title: "Objective" }} />
           <p className="text-lg mt-4">
-            The LEGO dataset consists of comprehensive information on LEGO sets,
-            including themes, parts, and years of release. The goal is to
-            explore the evolution of LEGO themes and provide insights into the
-            most iconic sets and parts.
+            Analyze LEGO set trends, part usage, and popular themes to uncover
+            historical patterns and product evolution.
           </p>
 
           <SectionTitle params={{ title: "Methodology" }} />
@@ -90,8 +88,8 @@ export default function LegoPage() {
             className="rounded shadow-md w-full h-auto mb-2"
           />
           <p className="text-gray-600 text-sm">
-            Bar Chart illustrating yearly growth and trends in the average number of LEGO parts
-            produced.
+            Bar Chart illustrating yearly growth and trends in the average
+            number of LEGO parts produced.
           </p>
         </div>
       </div>
