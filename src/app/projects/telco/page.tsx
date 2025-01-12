@@ -8,7 +8,7 @@ export default function TelcoPage() {
   return (
     <div className="">
       <div className="mx-auto max-w-[60vw] px-4 py-8">
-        <ProjectTitle params={{ title: "Capital Bikeshare Pattern" }} />
+        <ProjectTitle params={{ title: "Telco Understanding Customer Preferences and Usage Patterns" }} />
 
         <div className="flex flex-row space-x-4 justify-center mt-4 mb-8">
           <Button>
