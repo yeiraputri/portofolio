@@ -54,7 +54,109 @@ export default function TelcoPage() {
             segmentation, and clustering insights:
           </p>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+
+          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 leading-relaxed mt-4">
+            <li>
+              <strong>Data Cleaning:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Found numerous missing values; handled them via mean/median
+                  imputation.
+                </li>
+                <li>
+                Outliers were present but deemed insignificant, thus they remained unchanged.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Exploratory Data Analysis (EDA):</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Observed that payment methods varied by gender and
+                  senior-citizen status, with electronic checks dominating among
+                  these groups.
+                </li>
+                <li>
+                  Found a 0.21 correlation between customer tenure and all
+                  service types.
+                </li>
+                <li>Phone service users had the highest average tenure.</li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Segmentation:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Customers with partners often used internet service plus
+                  device protection.
+                </li>
+                <li>
+                  Customers without partners mostly used only internet service.
+                </li>
+                <li>
+                  Customers not using phone service typically had no partners,
+                  didn’t use tech support, and had lower monthly charges (under
+                  50).
+                </li>
+                <li>
+                  Marketing via SMS was more common for higher monthly-charge
+                  customers.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Classification:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Using the "Contract" column, random undersampling was applied and achieved an F1 macro average of{" "}
+                  <strong>0.67739</strong>.
+                </li>
+                <li>
+                  Identified <strong>21 columns</strong> as crucial for sending
+                  contract offers.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Prediction:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Gradient boosting was applied to predict monthly charges with an{" "}
+                  <strong>R-squared of 0.86010</strong>.
+                </li>
+                <li>
+                  All columns contributed to the model’s predictive power.
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Clustering:</strong>
+              <ul className="list-disc list-inside ml-5 space-y-1">
+                <li>
+                  Using PCA Created <strong>16 clusters</strong> with an approximate
+                  accuracy of <strong>0.9497</strong>.
+                </li>
+                <li>
+                  Clusters differed by monthly charges, number of dependents,
+                  and marketing approaches (cold calls, emails, SMS).
+                </li>
+              </ul>
+            </li>
+
+            <li>
+              <strong>Visualization:</strong>
+              <span className="ml-1">
+                Developed multiple visual dashboards and plots to highlight each
+                segment’s distinct characteristics.
+              </span>
+            </li>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <div>
               <p className="font-semibold mb-2">Snippet 1</p>
               <Image
@@ -111,108 +213,6 @@ export default function TelcoPage() {
               </p>
             </div>
           </div>
-
-          <ul className="list-disc list-inside space-y-4 text-lg text-gray-700 leading-relaxed mt-4">
-            <li>
-              <strong>Data Cleaning:</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Found numerous missing values; handled them via mean/median
-                  imputation.
-                </li>
-                <li>
-                  Outliers existed but were insignificant, so I left them as
-                  is.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Exploratory Data Analysis (EDA):</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Observed that payment methods varied by gender and
-                  senior-citizen status, with electronic checks dominating among
-                  these groups.
-                </li>
-                <li>
-                  Found a 0.21 correlation between customer tenure and all
-                  service types.
-                </li>
-                <li>Phone service users had the highest average tenure.</li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Segmentation:</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Customers with partners often used internet service plus
-                  device protection.
-                </li>
-                <li>
-                  Customers without partners mostly used only internet service.
-                </li>
-                <li>
-                  Customers not using phone service typically had no partners,
-                  didn’t use tech support, and had lower monthly charges (under
-                  50).
-                </li>
-                <li>
-                  Marketing via SMS was more common for higher monthly-charge
-                  customers.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Classification (Contract Column):</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Used random undersampling and achieved an F1 macro average of{" "}
-                  <strong>0.67739</strong>.
-                </li>
-                <li>
-                  Identified <strong>21 columns</strong> as crucial for sending
-                  contract offers.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Prediction (Monthly Charges):</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Leveraged gradient boosting to predict monthly charges with an{" "}
-                  <strong>R-squared of 0.86010</strong>.
-                </li>
-                <li>
-                  All columns contributed to the model’s predictive power.
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Clustering (PCA + K-means):</strong>
-              <ul className="list-disc list-inside ml-5 space-y-1">
-                <li>
-                  Created <strong>16 clusters</strong> with an approximate
-                  accuracy of <strong>0.9497</strong>.
-                </li>
-                <li>
-                  Clusters differed by monthly charges, number of dependents,
-                  and marketing approaches (cold calls, emails, SMS).
-                </li>
-              </ul>
-            </li>
-
-            <li>
-              <strong>Visualization:</strong>
-              <span className="ml-1">
-                Developed multiple visual dashboards and plots to highlight each
-                segment’s distinct characteristics.
-              </span>
-            </li>
           </ul>
         </div>
       </div>

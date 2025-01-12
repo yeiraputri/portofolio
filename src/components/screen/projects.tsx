@@ -38,7 +38,7 @@ export default function ProjectsCarousel() {
       description:
         "Conducted exploratory data analysis (EDA) on the LEGO dataset to uncover trends and insights.",
       techStack: ["SQL", "Python"],
-      link: "/projects/mobile-chat-app",
+      link: "/projects/lego",
     },
   ];
 

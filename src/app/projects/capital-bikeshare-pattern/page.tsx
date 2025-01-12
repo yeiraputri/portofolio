@@ -88,10 +88,10 @@ export default function CapitalBikeSharePage() {
             </li>
 
             <li>
-              <strong>Prediction (Count):</strong>
+              <strong>Prediction:</strong>
               <ul className="list-disc list-inside ml-5 space-y-1">
                 <li>
-                  Used gradient boosting to predict daily rental count
+                  Using the 'Count' column, gradient boosting was applied to predict the daily rental count.
                   (R-squared = 0.896).
                 </li>
                 <li>
@@ -104,7 +104,7 @@ export default function CapitalBikeSharePage() {
             <li>
               <strong>Visualization:</strong>
               <span className="ml-1">
-                Created multiple visuals for each characteristic to illustrate
+                Created multiple visuals and dashboard to illustrate
                 rental patterns and user segmentation.
               </span>
             </li>
@@ -123,7 +123,7 @@ export default function CapitalBikeSharePage() {
               className="rounded shadow-md w-full h-auto mb-2"
             />
             <p className="text-gray-600 text-sm">
-              An example of the BikeShare analysis, illustrating
+              Dashboard of the BikeShare analysis, illustrating
               temperature-based rental trends and usage patterns.
             </p>
           </div>
