@@ -14,15 +14,17 @@ export default function ExperienceItem({
 }) {
   return (
     <div className="flex flex-col h-full">
-      <div className="lg:w-full w-full lg:px-0 px-12 flex flex-col items-center justify-center space-y-6">
-        <div className="flex flex-row space-x-[10vw] ">
-          <Image
-            src={imageSrc}
-            alt={altText}
-            width={imageWidth}
-            height={imageHeight}
-          />
-          <div className="flex flex-col items-center pt-4">
+      <div className="lg:w-full w-full lg:px-0 px-12 flex flex-col items-center justify-center space-y-6 ">
+        <div className="flex flex-row space-x-[10vw] rounded-xl  p-6 ">
+          <div className="relative h-32 w-48 overflow-hidden bg-background">
+            <Image
+              src={imageSrc}
+              alt={altText}
+              fill
+              className="object-contain p-2"
+            />
+          </div>
+          <div className="flex flex-col items-center pt-4  px-4">
             <p className="lg:text-lg text-md">{company}</p>
             <p className="lg:text-lg text-md">{position}</p>
             <p className="lg:text-lg text-md">{date}</p>

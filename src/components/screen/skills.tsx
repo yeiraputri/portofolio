@@ -1,122 +1,88 @@
 "use client";
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
+
 import Image from "next/image";
-import Autoplay from "embla-carousel-autoplay";
-import { useRef } from "react";
 import Content from "../common/content";
 import PageTitle from "../common/page-title";
 
-export default function Skills() {
-  const plugin = useRef(Autoplay({ delay: 2000 }));
+import { Card, CardContent } from "@/components/ui/card";
+import { Badge } from "@/components/ui/badge";
 
+type Skill = {
+  name: string;
+  icon: string;
+  category: "BI" | "Data" | "Automation" | "Analytics";
+};
+
+const skills: Skill[] = [
+  { name: "Excel / Spreadsheets", icon: "/skills/excel.png", category: "Analytics" },
+  { name: "Python", icon: "/skills/python.png", category: "Data" },
+  { name: "SQL", icon: "/skills/sql.png", category: "Data" },
+  { name: "Power BI", icon: "/skills/powerbi.png", category: "BI" },
+  { name: "Tableau", icon: "/skills/tableau.png", category: "BI" },
+  { name: "Looker Studio", icon: "/skills/looker.png", category: "BI" },
+  { name: "Snowflake", icon: "/skills/snowflake.png", category: "Data" },
+  { name: "Power Apps", icon: "/skills/powerapps.png", category: "Automation" },
+  { name: "Power Automate", icon: "/skills/powerautomate.png", category: "Automation" },
+];
+
+const categoryLabel: Record<Skill["category"], string> = {
+  BI: "BI",
+  Data: "Data",
+  Automation: "Automation",
+  Analytics: "Analytics",
+};
+
+export default function Skills() {
   return (
     <Content>
       <PageTitle params={{ title: "Skills" }} />
-      <div className="flex flex-col lg:items-center lg:mx-[20px] lg:my-[230px] mx-6 my-[80px]">
-        <div className="flex flex-col  space-y-20 lg:block hidden">
-          <div className="flex flex-row justify-center items-center mt-[40px] lg:space-x-20">
-            <Image
-              src="/skills/excel.png"
-              alt="Excel"
-              height={200}
-              width={200}
-            />
-            <Image
-              src="/skills/python.png"
-              alt="Python"
-              height={200}
-              width={200}
-            />
-            <Image
-              src="/skills/looker.png"
-              alt="Looker Studio.js"
-              height={200}
-              width={200}
-            />
-            <Image
-              src="/skills/powerbi.png"
-              alt="Power BI"
-              height={200}
-              width={200}
-            />
-            <Image src="/skills/sql.png" alt="SQL" height={200} width={200} />
-            <Image
-              src="/skills/tableau.png"
-              alt="Tabelau"
-              height={200}
-              width={200}
-            />
+      <div className="px-6 md:px-12 xl:px-16 2xl:px-20 ">
+        <div className="mx-auto w-full max-w-screen-2xl">
+          <div className="flex flex-col gap-3 md:flex-row md:items-end md:justify-between">
+            <div className="max-w-2xl">
+              <h2 className="text-xl md:text-2xl font-semibold"></h2>
+            </div>
+
+            <div className="flex flex-wrap gap-2">
+              <Badge variant="secondary" className="font-normal">BI</Badge>
+              <Badge variant="secondary" className="font-normal">Data</Badge>
+              <Badge variant="secondary" className="font-normal">Automation</Badge>
+              <Badge variant="secondary" className="font-normal">Analytics</Badge>
+            </div>
           </div>
-        </div>
 
-        <div className="w-2/3 self-center lg:hidden block">
-          <Carousel plugins={[plugin.current]}>
-            <CarouselContent className="space-x-20">
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/tableau.png"
-                  alt="Tabelau"
-                  height={100}
-                  width={100}
-                />
-                <p className={`text-[20px] mt-2 `}>Tableau</p>
-              </CarouselItem>
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/powerbi.png"
-                  alt="Power BI"
-                  height={100}
-                  width={100}
-                />
-                <p className={`text-[20px] mt-2 `}>Power BI</p>
-              </CarouselItem>
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/sql.png"
-                  alt="SQL"
-                  height={100}
-                  width={100}
-                />
-                <p className={`text-[20px] mt-2 `}>SQL</p>
-              </CarouselItem>
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/python.png"
-                  alt="Python"
-                  height={100}
-                  width={100}
-                />
-                <p className={`text-[20px] mt-2 `}>Python</p>
-              </CarouselItem>
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/looker.png"
-                  alt="Looker Studio.js"
-                  height={100}
-                  width={100}
-                />
-                <p className={`text-[20px] mt-2 `}>Looker Studio</p>
-              </CarouselItem>
+          <div className="mt-8 grid gap-5 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4">
+            {skills.map((skill) => (
+              <Card
+                key={skill.name}
+                className="group border bg-white/70 shadow-sm transition-all hover:-translate-y-1 hover:shadow-lg"
+              >
+                <CardContent className="p-6 flex items-center gap-4">
+                  <div className="relative h-14 w-14 shrink-0 overflow-hidden rounded-xl border bg-muted/20">
+                    <Image
+                      src={skill.icon}
+                      alt={skill.name}
+                      fill
+                      className="object-contain p-2"
+                      unoptimized
+                    />
+                  </div>
 
-              <CarouselItem className="flex flex-col justify-center items-center min-w-[250px] max-w-[250px] min-h-[250px] max-h-[250px] ">
-                <Image
-                  src="/skills/excel.png"
-                  alt="Excel"
-                  height={100}
-                  width={110}
-                />
-                <p className={`text-[20px] mt-2 `}>Excel and Spreadsheet</p>
-              </CarouselItem>
-            </CarouselContent>
-            <CarouselPrevious />
-            <CarouselNext />
-          </Carousel>
+                  <div className="min-w-0 flex-1">
+                    <div className="flex items-center justify-between gap-3">
+                      <p className="font-medium leading-tight truncate">{skill.name}</p>
+                      <Badge variant="secondary" className="font-normal">
+                        {categoryLabel[skill.category]}
+                      </Badge>
+                    </div>
+
+                    
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+
         </div>
       </div>
     </Content>
